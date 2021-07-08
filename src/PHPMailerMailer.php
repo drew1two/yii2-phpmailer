@@ -7,7 +7,7 @@
  */
 
 declare(strict_types = 1);
-namespace dicr\phpmailer;
+namespace drew1two\phpmailer;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use Yii;

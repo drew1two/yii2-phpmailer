@@ -7,7 +7,7 @@
  */
 
 declare(strict_types = 1);
-namespace dicr\phpmailer;
+namespace drew1two\phpmailer;
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
