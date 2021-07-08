@@ -1,9 +1,9 @@
 {
-    "name": "dicr/yii2-phpmailer",
+    "name": "drew1two/yii2-phpmailer",
     "type": "yii2-extension",
     "license": "MIT",
-    "homepage": "https://gitlab.com/dicr/yii2-phpmailer",
-    "description": "Адаптер PHPMailer для Yii2",
+    "homepage": "https://github.com/drew1two/yii2-phpmailer",
+    "description": "Adapter PHPMailer for Yii2",
     "keywords": ["dicr", "yii2", "phpmailer", "mail", "adaper"],
     "authors": [
         {
@@ -13,20 +13,16 @@
             "role": "developer"
         }
     ],
-    "support": {
-        "source": "https://gitlab.com/dicr/yii2-phpmailer.git"
-    },
     "autoload": {
         "psr-4": {
-            "dicr\\phpmailer\\": "src/"
+            "drew1two\\phpmailer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "dicr\\tests\\": "tests/"
+            "drew1two\\tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
     "require": {
         "php": "~7.4 || ~8.0.1",
 
