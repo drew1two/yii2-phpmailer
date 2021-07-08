@@ -29,12 +29,12 @@ const TO = ['develop@dicr.org' => 'Dicr'];
 /** @var string */
 const SUBJ = 'Yii2 PHPMailer Test';
 
-// приложение
-new yii\web\Application([
+// attachment
+new \yii\web\Application([
     'id' => 'test-app',
     'basePath' => __DIR__,
     'components' => [
-        'cache' => yii\caching\FileCache::class,
+        'cache' => \yii\caching\FileCache::class,
 
         'request' => [
             'scriptFile' => __FILE__,
@@ -42,7 +42,7 @@ new yii\web\Application([
         ],
 
         'mailer' => [
-            'class' => dicr\phpmailer\PHPMailerMailer::class,
+            'class' => \dicr\phpmailer\PHPMailerMailer::class,
             'transportConfig' => [
                 'CharSet' => CHARSET
             ],

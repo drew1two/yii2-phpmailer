@@ -19,18 +19,18 @@ use yii\mail\BaseMailer;
 use function array_merge;
 
 /**
- * Почтовый сервис, использующий PHPMailer в качестве транспорта.
+ * Postal service using PHPMailer as a transport.
  */
 class PHPMailerMailer extends BaseMailer
 {
     /** @inheritDoc */
     public $messageClass = PHPMailerMessage::class;
 
-    /** @var array Конфиг PHPMailer */
+    /** @var array Config PHPMailer */
     public $transportConfig = [];
 
     /**
-     * Создает транспорт.
+     * Creates transport.
      *
      * @return PHPMailer
      * @throws InvalidConfigException
@@ -49,14 +49,14 @@ class PHPMailerMailer extends BaseMailer
      */
     protected function createMessage(): PHPMailerMessage
     {
-        /** @var PHPMailerMessage $msg сначала создаем сообщение с транспортом (до инициализации) */
+        /** @var PHPMailerMessage $msg first we create a message with transport (before initialization) */
         $msg = Yii::createObject(array_merge([
             'class' => $this->messageClass,
             'mailer' => $this,
             'transport' => $this->createTransport()
         ]));
 
-        // инициализируем сообщение уже с транспортом
+        // we initialize the message already with the transport
         if (! empty($this->messageConfig)) {
             Yii::configure($msg, $this->messageConfig);
         }
@@ -71,13 +71,13 @@ class PHPMailerMailer extends BaseMailer
     protected function sendMessage($message): bool
     {
         if (! $message instanceof PHPMailerMessage) {
-            throw new InvalidArgumentException('Не поддерживаемый тип сообщений');
+            throw new InvalidArgumentException('Unsupported message type');
         }
 
         try {
             return $message->transport->send();
         } catch (\PHPMailer\PHPMailer\Exception $ex) {
-            throw new Exception('Ошибка отправки', 0, $ex);
+            throw new Exception('Send error', 0, $ex);
         }
     }
 }

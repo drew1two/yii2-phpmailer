@@ -316,10 +316,10 @@ class PHPMailerMessage extends BaseMessage
     }
 
     /**
-     * Нормализует адрес.
+     * Normalizes the address.
      *
-     * @param string|array $addr формат адреса в Yii
-     * @return array нормализованный email => $name
+     * @param string|array $addr address format in Yii
+     * @return array normalized email => $name
      */
     private static function normalizeAddr($addr): array
     {
@@ -337,10 +337,10 @@ class PHPMailerMessage extends BaseMessage
     }
 
     /**
-     * Форматирует адрес PHPMailer в формат Yii.
+     * Formats the address PHPMailer in format Yii.
      *
-     * @param array $addr массив пар [$email, $name]
-     * @return array адрес в формате Yii email => name или [email]
+     * @param array $addr array of pairs [$email, $name]
+     * @return array address in the format Yii email => name or [email]
      */
     private static function formatAddr(array $addr): array
     {
