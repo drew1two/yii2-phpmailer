@@ -1,4 +1,4 @@
-# PHPMailer адаптер для Yii2
+# PHPMailer adapter for Yii2
 
 Mail service for Yii2 using as transport [PHPMailer](https://github.com/PHPMailer/PHPMailer).
 
