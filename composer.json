@@ -28,7 +28,7 @@
 
         "yiisoft/yii2": "~2.0",
 
-        "phpmailer/phpmailer": "~v6.3"
+        "phpmailer/phpmailer": "~v6.5"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
